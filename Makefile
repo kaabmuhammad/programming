@@ -1,4 +1,4 @@
-define USAGE
+define $USAGE
 Super awesome hand-crafted build system ⚙️
 
 Commands:
@@ -9,7 +9,7 @@ endef
 
 export USAGE
 help:
-	@echo "$$USAGE"
+	@echo $$USAGE
 
 init:
 	pip3 install pipenv

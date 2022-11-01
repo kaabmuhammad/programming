@@ -1,5 +1,7 @@
 from roman_numeral_converter import *
 import pytest
+import flask
+from main import app
 
 
 def test_to_arabic_number_1_rta():
@@ -50,3 +52,9 @@ def test_to_roman_numeral_90_atn():
 def test_to_roman_numeral_3999_atn():
     """big to_roman_numeral (3999) == MMMCMXCIX"""
     assert to_roman_numeral(3999) == "MMMCMXCIX"
+
+
+def test_index_route():
+    response = app.test_client().get("/home/")
+    assert to_roman_numeral(5) == "V"
+    assert response.status_code == 200
