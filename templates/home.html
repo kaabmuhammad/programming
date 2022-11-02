@@ -3,16 +3,16 @@
     <form method="post">
         <label for="title">Enter an Arabic number to convert it to a Roman numeral</label>
         <br>
-        <input type="text" name="title"
+        <input type="text" name="number"
                placeholder="Integer"
-               value="{{ request.form['title'] }}"></input><br>
+               value="{{ request.form['number'] }}"></input><br>
         <br>
 
-        <label for="content">Enter a Roman numeral to convert it to Arabic number</label>
+        <label for="roman">Enter a Roman numeral to convert it to Arabic number</label>
         <br>
-        <textarea name="content"
+        <textarea name="roman"
                   placeholder="String"
-                  >{{ request.form['content'] }}</textarea><br>
+                  >{{ request.form['roman'] }}</textarea><br>
         <br>
         <button type="submit">Submit</button>
     </form>

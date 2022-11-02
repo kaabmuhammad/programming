@@ -29,11 +29,18 @@ def to_arabic_number(s):
     return num
 
 
+"""Function to convert integer to roman numeral"""
+
+
 def to_roman_numeral(num):
+
+    """initialize values and respective"""
+
     val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
     syb = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
     roman_num = ""
     i = 0
+
     if num == 0:
         return "nulla"
     while num > 0:
@@ -44,6 +51,6 @@ def to_roman_numeral(num):
     return roman_num
 
 
-name = "MCMVII"
-print(to_arabic_number(name))
-print(to_roman_numeral(25))
+# name = "MCMVII"
+# print(to_arabic_number(name))
+# print(to_roman_numeral(25))

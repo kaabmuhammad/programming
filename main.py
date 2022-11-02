@@ -16,14 +16,14 @@ def index():
 @app.route("/home/", methods=("GET", "POST"))
 def create():
     if request.method == "POST":
-        num = int(request.form["title"])
+        num = int(request.form["number"])
         cal = []
 
         cal.append({num: to_roman_numeral(num)})
-        string = request.form["content"]
+        string = request.form["roman"]
 
         cal.append({string: to_arabic_number(string)})
-        values.append(cal)
+        values.insert(1, cal)
         return redirect(url_for("index"))
 
     return render_template("home.html")
